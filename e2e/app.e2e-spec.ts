@@ -7,8 +7,8 @@ describe('becompany-rss-reader-webpack App', function() {
     page = new BecompanyRssReaderWebpackPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display "BeCompany news" message in the title', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('BeCompany news');
   });
 });
