@@ -1,0 +1,8 @@
+.center {
+  margin: auto;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+}
