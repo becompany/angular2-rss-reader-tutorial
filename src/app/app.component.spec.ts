@@ -2,13 +2,32 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { FeedCardComponent } from './feed-card/feed-card.component';
 
-describe('App: BecompanyRssReaderWebpack', () => {
+import { MdCardModule } from '@angular2-material/card';
+import { MdToolbarModule } from '@angular2-material/toolbar';
+import { MdButtonModule } from '@angular2-material/button';
+import { MdIconModule, MdIconRegistry } from '@angular2-material/icon';
+
+import { StripHtmlTagsPipe } from './pipe/strip-html-tags.pipe';
+
+import { FeedService } from './feed.service';
+
+describe('App: BeCompany RSS Reader', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
+      imports: [
+        MdCardModule,
+        MdToolbarModule,
+        MdButtonModule,
+        MdIconModule
       ],
+      declarations: [
+        AppComponent,
+        FeedCardComponent,
+        StripHtmlTagsPipe
+      ],
+      providers: [FeedService, MdIconRegistry]
     });
   });
 
@@ -18,16 +37,10 @@ describe('App: BecompanyRssReaderWebpack', () => {
     expect(app).toBeTruthy();
   }));
 
-  it(`should have as title 'app works!'`, async(() => {
-    let fixture = TestBed.createComponent(AppComponent);
-    let app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app works!');
-  }));
-
-  it('should render title in a h1 tag', async(() => {
+  it('should render "BeCompany news" in a span tag', async(() => {
     let fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     let compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('app works!');
+    expect(compiled.querySelector('span.center').textContent).toContain('BeCompany news');
   }));
 });
