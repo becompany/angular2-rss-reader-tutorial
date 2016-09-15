@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { Http, Response } from '@angular/http';
 import {Observable} from 'rxjs/Rx';
-import { Feed } from './model/feed'
+import { Feed } from './model/feed';
 
 @Injectable()
 export class FeedService {
 
-  private rssToJsonServiceBaseUrl: string = "http://rss2json.com/api.json?rss_url=";
+  private rssToJsonServiceBaseUrl: string = 'http://rss2json.com/api.json?rss_url=';
 
   constructor(
     private http: Http

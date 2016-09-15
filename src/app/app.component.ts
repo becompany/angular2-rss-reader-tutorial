@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   private feeds: any;
 
   constructor (
-    private feedService:FeedService
+    private feedService: FeedService
   ) {}
 
   ngOnInit() {
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
   private refreshFeed() {
     this.feedService.getFeedContent(this.feedUrl)
         .subscribe(
-            feed => {this.feeds = feed.items},
+            feed => this.feeds = feed.items,
             error => console.log(error));
   }
 
