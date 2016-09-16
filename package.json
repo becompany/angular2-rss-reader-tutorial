@@ -25,6 +25,8 @@
     "@angular2-material/core": "^2.0.0-alpha.8-1",
     "@angular2-material/icon": "^2.0.0-alpha.8-1",
     "@angular2-material/toolbar": "^2.0.0-alpha.8-1",
+    "@types/cordova": "0.0.33",
+    "@types/cordova-plugin-file-transfer": "0.0.2",
     "core-js": "^2.4.1",
     "hammerjs": "^2.0.8",
     "rxjs": "5.0.0-beta.12",
