@@ -1,4 +1,4 @@
-<md-card class="card-feed-entry">
+<md-card class="card-feed-entry" (click)="openLinkInBrowser()">
   <md-card-title>{{feed.title}}</md-card-title>
   <md-card-subtitle>{{feed.author}} - {{feed.pubDate | date:'dd-MM-yyyy'}}</md-card-subtitle>
   <md-card-content>{{feed.description | stripHtmlTags}}</md-card-content>
