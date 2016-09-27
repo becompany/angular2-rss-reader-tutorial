@@ -13,12 +13,14 @@ import { AppComponent } from './app.component';
 import { FeedCardComponent } from './feed-card/feed-card.component';
 import { FeedService } from './feed.service';
 import { StripHtmlTagsPipe } from './pipe/strip-html-tags.pipe';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FeedCardComponent,
-    StripHtmlTagsPipe
+    StripHtmlTagsPipe,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

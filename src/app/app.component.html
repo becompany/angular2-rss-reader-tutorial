@@ -4,3 +4,4 @@
 </md-toolbar>
 
 <app-feed-card *ngFor="let feed of feeds" [feed]="feed" ></app-feed-card>
+<app-spinner *ngIf="!feeds.length"></app-spinner>
