@@ -19,4 +19,9 @@ module.exports = function(context) {
         fs.unlinkSync(baseWWW + '/' + files[i]);
       }
     }
+    fs.writeFileSync(baseWWW + '/.gitignore', `# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
+`);
 };
