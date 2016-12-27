@@ -22,6 +22,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.refreshFeed();
+    document.addEventListener("deviceready", () => {
+      console.log('Using Cordova plugins with Angular 2. Cordova version: ' + device.cordova)
+    }, false)
   }
 
   private refreshFeed() {
