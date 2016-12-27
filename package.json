@@ -32,6 +32,8 @@
     "zone.js": "^0.6.23"
   },
   "devDependencies": {
+    "@types/cordova": "0.0.34",
+    "@types/cordova-plugin-device": "0.0.3",
     "@types/hammerjs": "^2.0.32",
     "@types/jasmine": "^2.2.30",
     "angular-cli": "^1.0.0-beta.15",
