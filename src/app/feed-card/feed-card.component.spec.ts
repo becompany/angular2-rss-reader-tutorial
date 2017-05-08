@@ -5,7 +5,7 @@ import { By }              from '@angular/platform-browser';
 import { FeedCardComponent } from './feed-card.component';
 import { DebugElement }    from '@angular/core';
 
-import { MdCardModule } from '@angular2-material/card';
+import { MdCardModule } from '@angular/material';
 
 import { StripHtmlTagsPipe } from '../pipe/strip-html-tags.pipe';
 
