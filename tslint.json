@@ -43,7 +43,7 @@
     "no-duplicate-variable": true,
     "no-empty": false,
     "no-eval": true,
-    "no-inferrable-types": true,
+    "no-inferrable-types": [true, "ignore-params"],
     "no-shadowed-variable": true,
     "no-string-literal": false,
     "no-switch-case-fall-through": true,
@@ -107,6 +107,15 @@
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
-    "directive-class-suffix": true
+    "directive-class-suffix": true,
+    "callable-types": true,
+    "import-blacklist": [true, "rxjs"],
+    "import-spacing": true,
+    "interface-over-type-literal": true,
+    "no-empty-interface": true,
+    "no-string-throw": true,
+    "prefer-const": true,
+    "typeof-compare": true,
+    "unified-signatures": true
   }
 }

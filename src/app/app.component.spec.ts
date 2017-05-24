@@ -3,11 +3,9 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { FeedCardComponent } from './feed-card/feed-card.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
-import { MdCardModule } from '@angular2-material/card';
-import { MdToolbarModule } from '@angular2-material/toolbar';
-import { MdButtonModule } from '@angular2-material/button';
-import { MdIconModule, MdIconRegistry } from '@angular2-material/icon';
+import { MdCardModule, MdToolbarModule, MdButtonModule, MdIconModule, MdIconRegistry } from '@angular/material';
 
 import { StripHtmlTagsPipe } from './pipe/strip-html-tags.pipe';
 
@@ -25,7 +23,8 @@ describe('App: BeCompany RSS Reader', () => {
       declarations: [
         AppComponent,
         FeedCardComponent,
-        StripHtmlTagsPipe
+        StripHtmlTagsPipe,
+        SpinnerComponent
       ],
       providers: [FeedService, MdIconRegistry]
     });
