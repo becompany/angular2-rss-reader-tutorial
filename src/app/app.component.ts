@@ -14,7 +14,7 @@ import './rxjs-operators';
 export class AppComponent implements OnInit {
 
   private feedUrl: string = 'https%3A%2F%2Fwww.becompany.ch%2Fen%2Fblog%2Ffeed.xml';
-  private feeds: Array<FeedEntry> = [];
+  feeds: Array<FeedEntry> = [];
 
   constructor (
     private feedService: FeedService
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
     this.refreshFeed();
   }
 
-  private refreshFeed() {
+  refreshFeed() {
     this.feeds.length = 0;
     // Adds 1s of delay to provide user's feedback.
     this.feedService.getFeedContent(this.feedUrl).delay(1000)
