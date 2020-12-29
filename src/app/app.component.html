@@ -1,7 +1,7 @@
-<md-toolbar color="primary">
+<mat-toolbar color="primary">
   <span class="center">BeCompany news</span>
-  <span class="pointer-cursor"><md-icon (click)="refreshFeed()">refresh</md-icon></span>
-</md-toolbar>
+  <span class="pointer-cursor"><mat-icon (click)="refreshFeed()">refresh</mat-icon></span>
+</mat-toolbar>
 
 <app-feed-card *ngFor="let feed of feeds" [feed]="feed" ></app-feed-card>
 <app-spinner *ngIf="!feeds.length"></app-spinner>

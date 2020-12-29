@@ -5,7 +5,7 @@ import { By }              from '@angular/platform-browser';
 import { FeedCardComponent } from './feed-card.component';
 import { DebugElement }    from '@angular/core';
 
-import { MdCardModule } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
 
 import { StripHtmlTagsPipe } from '../pipe/strip-html-tags.pipe';
 
@@ -17,7 +17,7 @@ describe('Component: FeedCard', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [MdCardModule],
+      imports: [MatCardModule],
       declarations: [FeedCardComponent, StripHtmlTagsPipe], // declare the test component
     });
 
