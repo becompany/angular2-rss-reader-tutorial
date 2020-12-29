@@ -5,7 +5,10 @@ import { AppComponent } from './app.component';
 import { FeedCardComponent } from './feed-card/feed-card.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 
-import { MdCardModule, MdToolbarModule, MdButtonModule, MdIconModule, MdIconRegistry } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 
 import { StripHtmlTagsPipe } from './pipe/strip-html-tags.pipe';
 
@@ -15,10 +18,10 @@ describe('App: BeCompany RSS Reader', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        MdCardModule,
-        MdToolbarModule,
-        MdButtonModule,
-        MdIconModule
+        MatCardModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule
       ],
       declarations: [
         AppComponent,
@@ -26,7 +29,7 @@ describe('App: BeCompany RSS Reader', () => {
         StripHtmlTagsPipe,
         SpinnerComponent
       ],
-      providers: [FeedService, MdIconRegistry]
+      providers: [FeedService, MatIconRegistry]
     });
   });
 
